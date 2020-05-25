@@ -1,5 +1,6 @@
 import BaseLayout from '../components/layouts/BaseLayout';
 import axios from 'axios';
+import Link from 'next/link';
 
 const Portfolios = ({ posts }) => {
   console.log({ posts });
@@ -8,7 +9,11 @@ const Portfolios = ({ posts }) => {
       <h1>I am portfolios page</h1>;
       <ul>
         {posts.map((post) => (
-          <li key={post.id}>{post.body}</li>
+          <li key={post.id}>
+            <Link as={`/portfolios/${post.id}`} href='/portfolios/[id]'>
+              <a>{post.body}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </BaseLayout>

@@ -1,4 +1,4 @@
-import Header from '../shared/Header';
+import Header from '../shared/Header/Header';
 
 const BaseLayout = ({ children }) => (
   <>

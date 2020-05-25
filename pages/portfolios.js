@@ -11,7 +11,7 @@ const Portfolios = ({ posts }) => {
         {posts.map((post) => (
           <li key={post.id}>
             <Link as={`/portfolios/${post.id}`} href='/portfolios/[id]'>
-              <a>{post.body}</a>
+              <a>{post.title}</a>
             </Link>
           </li>
         ))}

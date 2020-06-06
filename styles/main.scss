@@ -5,13 +5,60 @@
 }
 
 body {
-  padding: 20px;
+  background-color: #100e17;
+  opacity: 0.9;
+  color: #999999;
+  font-family: 'roboto', sans-serif;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 a {
-  padding: 8px;
-  margin: 8px 16px;
-  background-color: red;
   text-decoration: none;
-  color: orange;
+  cursor: pointer;
+  padding: 0px;
+  background-color: transparent;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #000;
+  opacity: 0.9;
+
+  &:hover {
+    color: #0bceaf;
+  }
+}
+
+.container {
+  padding: 0 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+main,
+section {
+  height: 100vh;
 }

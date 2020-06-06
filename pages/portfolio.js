@@ -1,9 +1,9 @@
 import BaseLayout from '../components/layouts/BaseLayout';
 
-const Blogs = () => (
+const Portfolio = () => (
   <BaseLayout>
-    <h1>I am Blogs page</h1>
+    <h1>I am Portfolio page!!!!</h1>
   </BaseLayout>
 );
 
-export default Blogs;
+export default Portfolio;

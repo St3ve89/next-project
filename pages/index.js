@@ -1,8 +1,11 @@
 import BaseLayout from '../components/layouts/BaseLayout';
+import Home from '../components/Home/Home';
 
 const Index = () => (
   <BaseLayout>
-    <h1>I am index page</h1>
+    <main>
+      <Home />
+    </main>
   </BaseLayout>
 );
 

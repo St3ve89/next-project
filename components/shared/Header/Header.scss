@@ -60,10 +60,6 @@ nav {
       background-color: #fff;
       margin: 5px;
     }
-
-    // &:active {
-    //   outline: none;
-    // }
   }
 
   li {
@@ -73,6 +69,24 @@ nav {
 
 @media only screen and (max-width: 575px) {
   nav {
+    li {
+      opacity: 0;
+      &:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+      }
+      &:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+      }
+      &:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+      }
+      &.fade {
+        opacity: 1;
+      }
+    }
+    a {
+      font-size: 25px;
+    }
     .navbar {
       position: fixed;
       right: 0;
@@ -80,7 +94,7 @@ nav {
       height: 92vh;
       top: 8vh;
       background-color: #202026;
-      // background-color: pink;
+      pointer-events: none;
       flex-direction: column;
       justify-content: space-around;
       clip-path: circle(100px at 90% -20%);
@@ -90,6 +104,7 @@ nav {
       &.open {
         clip-path: circle(1300px at 90% -20%);
         -webkit-clip-path: circle(1300px at 90% -20%);
+        pointer-events: all;
       }
     }
     .burger {

@@ -5,10 +5,12 @@ header {
   right: 0;
   z-index: 99;
   padding: 10px 0;
+  height: 8vh;
 }
 
 nav {
   display: flex;
+  justify-content: space-between;
 
   .logo {
     display: inline-block;
@@ -39,20 +41,35 @@ nav {
 
   .navbar {
     display: flex;
-    flex-basis: auto;
-    flex-grow: 1;
     align-items: center;
-  }
-
-  ul {
-    display: flex;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    margin-left: auto;
+  }
+
+  .burger {
+    display: none;
+    div {
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+      margin: 5px;
+    }
   }
 
   li {
     margin: 0 24px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  nav {
+    .navbar {
+      position: absolute;
+      right: 0;
+      height: 92vh;
+      top: 8vh;
+      background-color: #100e17;
+    }
   }
 }

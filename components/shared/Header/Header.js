@@ -12,7 +12,9 @@ const Header = () => {
     <header>
       <div className='container'>
         <nav>
-          <div className='logo'>Logo</div>
+          <div className='logo'>
+            <img src='/images/logo.png' alt='logo' />
+          </div>
           <ul className={`${open ? 'open' : ''} navbar`}>
             <li>
               <Link href='/'>

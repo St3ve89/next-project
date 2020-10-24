@@ -1,8 +1,11 @@
 header {
   position: fixed;
   top: 0;
+  display: flex;
+  align-items: center;
   left: 0;
   right: 0;
+  background-color: #202026;
   z-index: 99;
   padding: 10px 0;
   height: 8vh;
@@ -49,12 +52,20 @@ nav {
 
   .burger {
     display: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
     div {
       width: 25px;
       height: 2px;
       background-color: #fff;
       margin: 5px;
     }
+
+    // &:active {
+    //   outline: none;
+    // }
   }
 
   li {
@@ -65,11 +76,26 @@ nav {
 @media only screen and (max-width: 575px) {
   nav {
     .navbar {
-      position: absolute;
+      position: fixed;
       right: 0;
+      width: 100%;
       height: 92vh;
       top: 8vh;
-      background-color: #100e17;
+      background-color: #202026;
+      // background-color: pink;
+      flex-direction: column;
+      justify-content: space-around;
+      clip-path: circle(100px at 90% -20%);
+      -webkit-clip-path: circle(100px at 90% -20%);
+      transition: all 1s ease-out;
+
+      &.open {
+        clip-path: circle(1300px at 90% -20%);
+        -webkit-clip-path: circle(1300px at 90% -20%);
+      }
+    }
+    .burger {
+      display: block;
     }
   }
 }

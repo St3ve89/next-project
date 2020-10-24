@@ -8,6 +8,24 @@
   .home-item {
     flex: 0 0 50%;
     max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    .home-hero-img {
+      height: 400px;
+      width: 400px;
+      border: 20px solid rgba(0, 0, 0, 0.07);
+      margin: 0 auto;
+      border-radius: 50%;
+      img {
+        margin: 0 auto;
+        text-align: center;
+        border: 20px solid rgba(0, 0, 0, 0.17);
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 
   .home-info {
@@ -42,10 +60,8 @@
           margin-right: 10px;
           transition: 0.3s;
           border-radius: 3px;
-          a {
-            display: flex;
-            color: white;
-          }
+          display: flex;
+          color: white;
 
           &:hover {
             background-color: #fff;
@@ -76,6 +92,16 @@
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .home-container {
+    flex-direction: column-reverse;
+
+    .home-item {
+      max-width: 100%;
     }
   }
 }

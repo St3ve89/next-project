@@ -1,11 +1,19 @@
 import { useState } from 'react';
-import Link from '../../Link/Link';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   const handleNavClick = () => {
     setOpen(!open);
+  };
+
+  const handleLinkClick = () => {
+    if (open) {
+      setOpen(false);
+    } else {
+      return;
+    }
   };
 
   return (
@@ -17,20 +25,38 @@ const Header = () => {
           </div>
           <ul className={`${open ? 'open' : ''} navbar`}>
             <li className={`${open ? 'fade' : ''}`}>
-              <Link href='/'>
-                <a>Home</a>
+              <Link
+                activeClass='active'
+                to='home'
+                spy={true}
+                smooth={true}
+                // onSetActive={handleSetActive}
+                duration={1000}
+                offset={-100}
+                onClick={handleLinkClick}
+              >
+                Home
               </Link>
             </li>
             <li className={`${open ? 'fade' : ''}`}>
-              <Link href='/about'>
-                <a>About</a>
+              <Link
+                activeClass='active'
+                to='about'
+                smooth={true}
+                spy={true}
+                duration={1000}
+                // onSetActive={handleSetActive}
+                offset={-100}
+                onClick={handleLinkClick}
+              >
+                About
               </Link>
             </li>
-            <li className={`${open ? 'fade' : ''}`}>
+            {/* <li className={`${open ? 'fade' : ''}`}>
               <Link href='/portfolios'>
                 <a>Portfolios</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
           <button onClick={handleNavClick} className='burger'>
             <div className='line'></div>
